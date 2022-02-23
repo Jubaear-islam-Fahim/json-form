@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="rearrange-input-area">
+        <div class="rearrange-input-left">
+            <div class="h3">INPUTS</div>
+            <p>
+                Rearrange by clicking and holding in the dark gray header area of each container.
+                Delete by clicking the X on the top right corner of each container. Add new container with inputs by
+                clicking the "Add inputs" button on the bottom.
+            </p>
+            <div class="rearrange-input-form">
+                <div class="rearrange-input-form-title">
+                    <div class="h4">Question 1</div>
+                    <div class="clear">✖</div>
+                </div>
+                <form action="/">
+                    <div class="input-group">
+                        <label>Question</label>
+                        <input type="text" class="input-box" placeholder="what is my name |">
+                    </div>
+                    <div class="input-group">
+                        <label>Equation</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Answare</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Option #1</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Option #2</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Option #3</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Option #4</label>
+                        <input type="text" class="input-box" placeholder="Type here...">
+                    </div>
+                    <div class="input-group">
+                        <label>Explanation</label>
+                        <textarea name="message" placeholder="Type here..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="input-type-btn">
+                <button type="submit">Add Inputs</button>
+            </div>
+        </div>
+        <div class="rearrange-input-right">
+            <div class="json-tabs">
+                <ul class="classes-tabs">
+                    <li class="current" data-tab="tabs1">JSON</li>
+                    <li data-tab="tabs2">Quiz Preview</li>
+                </ul>
+                <p>
+                    Values from the input boxes in JSON format.
+                </p>
+            </div>
+            <hr>
+            <div class="tabs-content">
+                <div class="json-box tab-content current" id="tabs1">
+                    <pre>
+                        <code class="language-javascript">
+                            {
+                                "order_number": 1,
+                                "question": "what is my name",
+                                "equation": "budi",
+                                "correct_answer": "bede",
+                                "explanation": "because bada budi bede",
+                                "answers": {
+                                    "a": {
+                                    "data": "bada",
+                                    "type": "image"
+                                    },
+                                    "b": {
+                                    "data": "bodo",
+                                    "type": "text"
+                                    },
+                                    "c": {
+                                    "data": "bidi",
+                                    "type": "text"
+                                    },
+                                    "d": {
+                                    "data": "budu",
+                                    "type": "text"
+                                    }
+                                }
+                            }
+                            
+                        </code>
+                    </pre>
+                </div>
+                <div class="qp-box tab-content" id="tabs2">
+                    <div class="qp-form"> 
+                        <div class="h3">Question 1</div>
+                        <textarea name="message" class="qp-textarea" placeholder="what is my name ?"></textarea>
+                        <ul>
+                            <li>Budi</li>
+                            <li>Bodo</li>
+                            <li>Bidi</li>
+                            <li>Budu</li>
+                        </ul>
+                        <div class="h5">Explanation</div>
+                        <p>
+                            Which part do we need solve first which part do we need solve first do we need solve first which part do we need solve first do we need solve first which part do we need  
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        (function ($) {
+            $('ul.classes-tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.classes-tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>

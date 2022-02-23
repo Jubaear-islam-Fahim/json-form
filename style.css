@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0; 
+    outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root{
+    --primary-color: #00298A;
+    --primary2-color: #1139A0;;
+    --bg-color: #EEF6FC;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: Helvetica;
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url('./font/Helvetica.ttf');
+}
+
+/* 
+    input style
+*/
+
+.rearrange-input-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rearrange-input-left{}
+.rearrange-input-left .h3 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+.rearrange-input-left p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.75px;
+    color: #000000; 
+}
+
+.rearrange-input-form{
+    background: #FFFFFF;
+    border: 2px solid #F1F1F1;
+    border-radius: 12px;
+    padding: 25px 10px;
+    margin-top: 40px;
+    position: relative;
+}
+.rearrange-input-form::before{
+    content: '';
+    position: absolute;
+    width: 3px; 
+    height: 95%;
+    left: -3px;
+    top: 50%; 
+    transform: translateY(-50%);
+    background: #FF9B04;
+    border-radius: 7px;
+}
+.rearrange-input-form-title{
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+    padding: 0 25px 25px;
+}
+.rearrange-input-form-title .h4 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'Inter', sans-serif;
+}
+.rearrange-input-form-title .clear {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.rearrange-input-form form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    row-gap: 25px;
+    column-gap: 33px;
+    padding-left: 25px;
+ 
+}
+.rearrange-input-form form .input-group:nth-child(1){
+    grid-column: 1 / 4; 
+}
+.rearrange-input-form form .input-group:nth-child(2){
+    grid-column: 4 / 8;
+}
+.rearrange-input-form form .input-group:nth-child(3){
+    grid-column: 8 / 12;
+}
+.rearrange-input-form form .input-group:nth-child(4){
+    grid-column: 1 / 6;
+}
+.rearrange-input-form form .input-group:nth-child(5){
+    grid-column: 6 / 12;
+}
+.rearrange-input-form form .input-group:nth-child(6){
+    grid-column: 1 / 6;
+}
+.rearrange-input-form form .input-group:nth-child(7){
+    grid-column: 6 / 12;
+}
+.rearrange-input-form form .input-group:nth-child(8){
+    grid-column: 1 / 12;
+}
+.rearrange-input-form form .input-group{
+    
+}
+.rearrange-input-form form .input-group label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 11px; 
+    display: block;
+    padding-bottom: 10px;
+}
+.rearrange-input-form form .input-group textarea,
+.rearrange-input-form form .input-group input {
+    background: #EEF6FC;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 15px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    height: 37px;
+    width: 100%;
+    padding: 0 13px;
+    font-family: "Inter";
+}
+
+.rearrange-input-form form .input-group textarea{
+    height: 75px;
+    padding: 10px 13px;
+}
+
+.input-type-btn{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.input-type-btn button {
+    background: #FF9A06;
+    border-radius: 32px;
+    width: 138px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s ;
+}
+
+.input-type-btn button:hover{
+    background-color: #00298A;
+}
+
+.rearrange-input-right{
+    background: #00298A;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.rearrange-input-right hr{
+    opacity: 0.2;
+    border: 0.5px solid #FFFFFF;
+    margin: 30px 0 30px;
+}
+
+.tabs-content{}
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background: #1139A0;
+    border-radius: 5px;
+}
+.json-box{
+    
+}
+
+.json-tabs{}
+.json-tabs ul {
+    display: flex;
+    gap: 15px;
+}
+
+.json-tabs ul li { 
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff; 
+    opacity: 0.5;
+    font-weight: normal;
+}
+.json-tabs ul li.current{
+    opacity: 1;
+    font-weight: bold;
+}
+.json-tabs p {
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding-top: 25px;
+}
+
+.tab-content{
+    display: none;
+}
+.tab-content.current{
+    display: block;
+}
+
+.qp-form{
+    background: #1139A0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.qp-form .h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex; 
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.qp-form .qp-textarea::placeholder{
+    color: #fff;
+}
+.qp-form .qp-textarea{
+    font-size: 16px;
+    line-height: 18px;   
+    padding: 15px;
+    width: 95%;
+    height: 90px;
+    background: #5372BC; 
+    border-radius: 4px;
+    border: 0;
+    outline: none; 
+    color: #fff;
+}
+.qp-form ul { 
+    list-style: upper-alpha;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 45px;
+    margin-top: 20px;
+}
+.qp-form ul li {
+    background: #5372BC; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.qp-form .h5 {
+    font-size: 14px;
+    line-height: 14px; 
+    padding-bottom: 15px;
+    padding-top: 20px;
+    color: #FFFFFF;
+
+    opacity: 0.7;
+}
+.qp-form p{
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+    .rearrange-input-area { 
+        grid-template-columns: 1fr; 
+    }
+}
