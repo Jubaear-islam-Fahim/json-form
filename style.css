@@ -67,9 +67,10 @@ body{
 .rearrange-input-area{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px 40px 0;
-    gap: 40px; 
+    padding: 40px 40px 0; 
+    column-gap: 40px;
     margin: 0 auto;
+    max-width: 1600px;
 }
 
 .rearrange-input-left{}
@@ -91,7 +92,7 @@ body{
     background: #FFFFFF;
     border: 2px solid #F1F1F1;
     border-radius: 12px;
-    padding: 25px 10px;
+    padding: 30px 10px 40px;
     margin-top: 40px;
     position: relative;
 }
@@ -121,6 +122,10 @@ body{
 .rearrange-input-form-title .clear {
     cursor: pointer;
     margin-left: auto;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    opacity: .5;
 }
 
 .rearrange-input-form form {
@@ -201,6 +206,19 @@ body{
     font-weight: 600;
     cursor: pointer;
 }
+.input-option::before{
+    content: 'Text';
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 51px;
+    height: 38px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+}
 
 .input-type-btn{
     display: grid;
@@ -232,9 +250,9 @@ body{
 .rearrange-input-right{
     background: #00298A;
     border-radius: 8px;
-    padding: 20px;
+    padding: 27px 25px;
     padding-bottom: 0;
-    height: 85vh;
+    height: 88vh;
 }
 
 .rearrange-input-right hr{
@@ -242,7 +260,12 @@ body{
     border: 0.5px solid #FFFFFF;
     margin: 30px 0 30px;
 }
-
+.dd-r {
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding-top: 25px;
+}
 .tabs-content{}
 :not(pre)>code[class*=language-], pre[class*=language-] {
     background: #1139A0;
@@ -270,12 +293,7 @@ body{
     opacity: 1;
     font-weight: bold;
 }
-.json-tabs p {
-    font-size: 14px;
-    line-height: 14px;
-    color: #FFFFFF;
-    padding-top: 25px;
-}
+
 
 .tab-content{
     display: none;
@@ -288,6 +306,7 @@ body{
     background: #1139A0;
     border-radius: 5px;
     padding: 20px;
+    padding: 40px 25px;
 }
 .qp-form .h3 {
     font-family: "Inter";
@@ -314,6 +333,7 @@ body{
     outline: none; 
     color: #fff;
     font-family: "Helvetica";
+    resize: none;
 }
 .qp-form ul { 
     list-style: upper-alpha;
@@ -361,6 +381,7 @@ body{
     opacity: 0.5;
     font-size: 12px;
     line-height: 24px;
+    padding: 10px 0;
 }
 
 
@@ -368,9 +389,11 @@ body{
     .rearrange-input-area { 
         grid-template-columns: 100%; 
         padding: 30px 20px;
+        row-gap: 40px;
     }
     .rearrange-input-right{
         height: auto;
+        padding-bottom: 50px;
     }
     .copy-right{
         text-align: center;
