@@ -251,8 +251,8 @@ body{
     background: #00298A;
     border-radius: 8px;
     padding: 27px 25px;
-    padding-bottom: 0;
-    height: 88vh;
+    padding-bottom: 5px;
+    min-height: 88vh;
 }
 
 .rearrange-input-right hr{
@@ -262,7 +262,7 @@ body{
 }
 .dd-r {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 18px;
     color: #FFFFFF;
     padding-top: 25px;
 }
@@ -406,13 +406,19 @@ body{
     /* .rearrange-input-form form .input-group {
         grid-column: 1 / 12 !important;
     }  */
+    .rearrange-input-form-title { 
+        padding: 0 3px 22px;
+    }
     .rearrange-input-form form .input-group {
-        padding-top: 20px;
+        /* padding-top: 20px; */
+        margin: 0 3px;
     }
     .rearrange-input-form form { 
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr;
         display: block; 
-        padding: 0 35px 0 11px;
+        padding: 0 35px 0 11px; */
+        padding-left: 0;
+        column-gap: 25px;
     }
     .qp-form .qp-textarea { 
         width: 87%; 
@@ -420,6 +426,59 @@ body{
     .qp-form ul li { 
         font-size: 12px;
     }
+
+    .rearrange-input-form form .input-group:nth-child(1){
+        grid-column: 1 / 12; 
+    }
+    .rearrange-input-form form .input-group:nth-child(2){
+        grid-column: 1 / 6;
+    }
+    .rearrange-input-form form .input-group:nth-child(3){
+        grid-column: 6 / 12;
+    }
+    .rearrange-input-form form .input-group:nth-child(4){
+        grid-column: 1 / 6;
+    }
+    .rearrange-input-form form .input-group:nth-child(5){
+        grid-column: 6 / 12;
+    }
+    .rearrange-input-form form .input-group:nth-child(6){
+        grid-column: 1 / 6;
+    }
+    .rearrange-input-form form .input-group:nth-child(7){
+        grid-column: 6 / 12;
+    }
+    .rearrange-input-form form .input-group:nth-child(8){
+        grid-column: 1 / 12;
+    }
+
+    .input-option::before{
+        display: none;
+    }
+
+    .rearrange-input-right { 
+        padding: 27px 15px; 
+    }
+
+    .qp-form { 
+        padding: 20px;
+        padding: 30px 15px;
+    }
+
+    .qp-form ul { 
+        column-gap: 25px; 
+    }
+
+    code[class*=language-], pre[class*=language-]{
+        font-size: 13px;
+    }
+    
 }
 
 
+@media (min-width: 320px) and (max-width: 335px) {
+    .rearrange-input-form form .input-group textarea, .rearrange-input-form form .input-group input {
+        width: 92%; 
+    }
+    
+}
